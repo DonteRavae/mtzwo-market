@@ -5,7 +5,6 @@ import { faUserCircle } from "@fortawesome/free-solid-svg-icons";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import logo from "../../assets/mtzwo-logo.png";
-import "./AppHeader.css";
 
 const StyledHeader = styled.header`
   height: 88px;
@@ -16,12 +15,16 @@ const StyledHeader = styled.header`
   background-color: rgb(51, 51, 51);
 `;
 const StyledBrandingSection = styled.section`
-  padding: 0.5em 2em 0.5em 2em;
+  padding: 0.5em .25em 0.5em 2em;
   cursor: pointer;
 //   padding-left: 2em;
   //   background-color: white;
   //   border: 3px solid #333;
   //   border-right: 1px solid white;
+
+  & img {
+    height: 185%;
+  }
 `;
 const StyledNavigationAndSearchSection = styled.div`
   width: 100%;
@@ -110,7 +113,7 @@ const StyledMemberServiceIcon = styled(FontAwesomeIcon)`
 const AppHeader = () => {
   return (
     <StyledHeader>
-      <StyledBrandingSection className="branding">
+      <StyledBrandingSection>
         <img src={logo} alt="" className="logo" />
       </StyledBrandingSection>
       <StyledNavigationAndSearchSection>
