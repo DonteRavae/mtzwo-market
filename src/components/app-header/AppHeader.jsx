@@ -77,7 +77,7 @@ const StyledMarketplaceSearchbar = styled.input.attrs({ type: "search" })`
   //   margin-right: 0.4em;
 `;
 const StyledSearchIconWrapper = styled.div`
-  background-color: purple;
+  background-color: #612376;
   height: 50%;
   width: 3%;
   padding: 0.5em;
