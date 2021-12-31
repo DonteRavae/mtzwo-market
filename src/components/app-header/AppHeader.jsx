@@ -38,14 +38,15 @@ const StyledCategoryNavLinkSection = styled.section`
   background-color: white;
   border: 1px solid #333;
   font-weight: 600;
+  border-radius: 3px;
 `;
 const StyledNavLink = styled.div`
   flex: 1;
   text-align: center;
   height: 25px;
   //   margin: 0 0.5em;
+  cursor: pointer;
   & span {
-    cursor: pointer;
     text-transform: uppercase;
     font-size: 0.9em;
   }
@@ -60,7 +61,8 @@ const StyledSearchSection = styled.section`
   height: 74px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: right;
+  padding-right: 2.5em;
   //   background-color: #444;
   span {
     color: white;
@@ -79,8 +81,8 @@ const StyledSearchIconWrapper = styled.div`
   height: 50%;
   width: 3%;
   padding: 0.5em;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
 `;
 const StyledSearchIcon = styled(FontAwesomeIcon)`
   cursor: pointer;
@@ -125,11 +127,11 @@ const AppHeader = () => {
         </StyledSearchSection>
         <StyledCategoryNavLinkSection>
           <StyledNavLink>
-            <span>Video</span>
+            <span>Audio</span>
           </StyledNavLink>{" "}
           |
           <StyledNavLink>
-            <span>Audio</span>
+            <span>Video</span>
           </StyledNavLink>{" "}
           |
           <StyledNavLink>
