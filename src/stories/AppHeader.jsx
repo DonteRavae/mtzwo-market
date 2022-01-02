@@ -14,10 +14,10 @@ const StyledHeader = styled.header`
   box-shadow: 0 2px 3px #888;
 `;
 const StyledBrandingSection = styled.section`
-  padding: 0.5em 0.25em 0.5em 1.5em;
+  padding: 0.5em 0.25em 0.5em 2em;
   cursor: pointer;
   & img {
-    height: 187%;
+    height: 185%;
   }
 `;
 const StyledNavigationAndSearchSection = styled.div`
@@ -97,8 +97,8 @@ const StyledSearchIcon = styled(FontAwesomeIcon)`
 `;
 const StyledMemberServicesSection = styled.section`
   width: 7%;
-`;
-const StyledMemberService = styled.div`
+  `;
+  const StyledMemberService = styled.div`
   height: 50%;
   display: flex;
   justify-content: left;
@@ -106,6 +106,7 @@ const StyledMemberService = styled.div`
   font-size: 0.85em;
   color: white;
   padding: 0 2em;
+  cursor: pointer;
   &:hover {
     background-color: #612376;
   }
