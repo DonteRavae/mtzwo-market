@@ -11,6 +11,7 @@ const StyledHeader = styled.header`
   width: 100%;
   display: flex;
   background-color: rgb(51, 51, 51);
+  box-shadow: 0 2px 3px #888;
 `;
 const StyledBrandingSection = styled.section`
   padding: 0.5em 0.25em 0.5em 2em;
@@ -49,6 +50,7 @@ const StyledCategoryNavLinkSection = styled.section`
   border: 1px solid #333;
   font-weight: 600;
   border-radius: 3px;
+  box-shadow: 0 2px 4px #888;
 `;
 const StyledNavLink = styled.div`
   flex: 1;
