@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserCircle } from "@fortawesome/free-solid-svg-icons";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import logo from "../../assets/mtzwo-logo.png";
+import logo from "./assets/mtzwo-logo.png";
 
 const StyledHeader = styled.header`
   height: 87px;
