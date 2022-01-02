@@ -13,7 +13,7 @@ const StyledHeader = styled.header`
   background-color: rgb(51, 51, 51);
 `;
 const StyledBrandingSection = styled.section`
-  padding: 0.5em .25em 0.5em 2em;
+  padding: 0.5em 0.25em 0.5em 2em;
   cursor: pointer;
   & img {
     height: 185%;
@@ -28,25 +28,22 @@ const StyledNavigationAndSearchSection = styled.div`
 `;
 const StyledDealsNav = styled.div`
   width: 5%;
-  height: 50%;
+  height: 60%;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-weight: 600;
+  padding: 0 1.5rem;
   color: white;
   text-align: center;
-
-  & span {
-    cursor: pointer;
-
-    &:hover {
-      text-decoration: underline;
-    }
+  cursor: pointer;
+  &:hover {
+    border: 1px solid white;
   }
 `;
 const StyledCategoryNavLinkSection = styled.section`
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
   color: #333;
   background-color: white;
   border: 1px solid #333;
@@ -132,7 +129,7 @@ const AppHeader = () => {
         <StyledSearchSection>
           <StyledMarketplaceSearchbar placeholder="Search Marketplace" />
           <StyledSearchIconWrapper>
-            <StyledSearchIcon icon={faSearch} size="lg"/>
+            <StyledSearchIcon icon={faSearch} size="lg" />
           </StyledSearchIconWrapper>
         </StyledSearchSection>
         <StyledDealsNav>
@@ -142,15 +139,12 @@ const AppHeader = () => {
           <StyledNavLink>
             <span>Audio</span>
           </StyledNavLink>{" "}
-          |
           <StyledNavLink>
             <span>Video</span>
           </StyledNavLink>{" "}
-          |
           <StyledNavLink>
             <span>Books</span>
           </StyledNavLink>{" "}
-          |
           <StyledNavLink>
             <span>Clothing</span>
           </StyledNavLink>
