@@ -11,6 +11,11 @@ export const StyledCategoryNavigationLink = styled(CategoryNavigationLink)`
   justify-content: center;
   height: 21px;
   cursor: pointer;
+  border: 1px solid #333;
+  border-radius: 3px;
+  box-shadow: 0 2px 4px #888;
+  background-color: white;
+  margin: 0 2.5rem;
   & span {
     text-transform: uppercase;
     font-size: 0.8em;
@@ -22,12 +27,8 @@ export const StyledCategoryNavigationLink = styled(CategoryNavigationLink)`
   }
 `;
 export const StyledCategoryNavigationBar = styled(CategoryNavigationBar)`
-  width: 98%;
+  width: 100%;
   display: flex;
   color: #333;
-  background-color: white;
-  border: 1px solid #333;
   font-weight: 600;
-  border-radius: 3px;
-  box-shadow: 0 2px 4px #888;
 `;
