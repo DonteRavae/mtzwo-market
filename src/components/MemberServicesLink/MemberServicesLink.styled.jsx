@@ -19,6 +19,7 @@ const StyledMemberServicesLink = styled(MemberServicesLink)`
   & span {
     margin-left: 0.5em;
     cursor: pointer;
+    white-space: nowrap;
   }
 `;
 

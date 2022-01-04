@@ -33,7 +33,7 @@ const AppHeader = () => {
       </StyledNavigationAndSearchWrapper>
       <StyledMemberServicesWrapper>
         <StyledMemberServicesLink
-          title="Account"
+          title="Sign In"
           icon={faUserCircle}
           iconSize="lg"
         />
