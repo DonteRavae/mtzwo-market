@@ -10,6 +10,7 @@ Designer | Donte Littlejohn | donteravae@gmail.com
 Developer | Donte Littlejohn | donteravae@gmail.com
 
 ## Sketch Wireframe Designs
+*This section is for personal use. Wireframe sketches can be found in `src/sketches`.*
 Component | Link
 --- | ---
 App Header | https://app.diagrams.net/#G1UBWuwoeeg0-a1RSG5dBwBZA-0iL8bIhZ
