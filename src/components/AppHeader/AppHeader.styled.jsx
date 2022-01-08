@@ -2,27 +2,24 @@ import styled from "styled-components";
 import { DEVICES, SIZES } from "../../utils/constants";
 
 export const StyledHeader = styled.header`
-  @media ${DEVICES.LARGE} {
-    height: 90px;
-    width: 100%;
-    display: flex;
-    background-color: rgb(51, 51, 51);
-    box-shadow: 0 2px 3px #888;
-    padding: 0.25rem 1.5rem;
-  }
-  @media (min-width: ${SIZES.SMEDIUM}) {
+  width: 100vw;
+  display: flex;
+  background-color: #333;
+  box-shadow: 0 2px 3px #888;
+  align-items: center;
+
+  @media (min-width: ${SIZES.LARGE}) {
     .menu-icon {
       display: none;
     }
   }
+  @media ${DEVICES.LARGE} {
+    height: 90px;
+    padding: 0.25rem 1.5rem;
+  }
 
-  @media ${DEVICES.SMALL} {
+  @media ${DEVICES.MEDIUM} {
     height: 75px;
-    width: 100vw;
-    display: flex;
-    background-color: #333;
-    align-items: center;
-    box-shadow: 0 2px 3px #888;
     padding: 0 1.5rem;
 
     .menu-icon {
@@ -48,6 +45,9 @@ export const StyledNavigationAndSearchWrapper = styled.div`
     flex-flow: row wrap;
     justify-content: space-evenly;
     align-items: center;
+  }
+  @media ${DEVICES.MEDIUM} {
+    with: 100%;
   }
   @media ${DEVICES.SMALL} {
     height: 100%;

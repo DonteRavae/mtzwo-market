@@ -25,7 +25,8 @@ const StyledMemberServicesLink = styled(MemberServicesLink)`
     }
   }
 
-  @media ${DEVICES.SMALL} {
+  @media ${DEVICES.MEDIUM} {
+    height: 30px;
     margin: 0 0.5rem;
     padding: 0.25rem;
     border: 1px solid transparent;
@@ -51,7 +52,7 @@ export const StyledMemberServicesWrapper = styled.section`
     display: flex;
     flex-direction: column;
   }
-  @media ${DEVICES.SMALL} {
+  @media ${DEVICES.MEDIUM} {
     height: 100%;
     display: flex;
     flex-direction: row;

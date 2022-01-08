@@ -27,7 +27,7 @@ export const StyledCategoryNavigationLink = styled(CategoryNavigationLink)`
       color: white;
     }
   }
-  @media ${DEVICES.SMALL} {
+  @media ${DEVICES.MEDIUM} {
     display: none;
   }
 `;
