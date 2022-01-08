@@ -23,7 +23,7 @@ const StyledMemberServicesLink = styled(MemberServicesLink)`
     white-space: nowrap;
   }
 
-  @media ${DEVICES.MEDIUM} {
+  @media ${DEVICES.LARGE} {
     height: 30px;
     margin: 0 0.5rem;
     padding: 0.25rem;
@@ -48,7 +48,7 @@ export const StyledMemberServicesWrapper = styled.section`
   height: 100%;
   display: flex;
   flex-direction: column;
-  @media ${DEVICES.MEDIUM} {
+  @media ${DEVICES.LARGE} {
     height: 100%;
     display: flex;
     flex-direction: row;

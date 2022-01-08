@@ -9,14 +9,12 @@ export const StyledHeader = styled.header`
   box-shadow: 0 2px 3px #888;
   align-items: center;
   padding: 0.25rem 1.5rem;
-
   @media (min-width: ${SIZES.LARGE}) {
     .menu-icon {
       display: none;
     }
   }
-
-  @media ${DEVICES.MEDIUM} {
+  @media ${DEVICES.LARGE} {
     height: 75px;
     padding: 0 1.5rem;
 
@@ -45,7 +43,5 @@ export const StyledNavigationAndSearchWrapper = styled.div`
   @media ${DEVICES.SMALL} {
     height: 100%;
     width: 45px;
-    display: flex;
-    align-items: center;
   }
 `;

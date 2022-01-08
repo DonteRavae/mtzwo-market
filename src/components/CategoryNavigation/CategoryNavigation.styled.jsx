@@ -25,7 +25,7 @@ export const StyledCategoryNavigationLink = styled(CategoryNavigationLink)`
     background-color: #612376;
     color: white;
   }
-  @media ${DEVICES.MEDIUM} {
+  @media ${DEVICES.LARGE} {
     display: none;
   }
 `;

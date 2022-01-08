@@ -15,3 +15,7 @@ export const DEVICES = {
   XLARGE: `(max-width: ${SIZES.XLARGE})`,
   XXLARGE: `(max-width: ${SIZES.XXLARGE})`,
 };
+
+export const THEME = {
+  PRIMARY: "#612376",
+};
