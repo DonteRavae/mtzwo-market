@@ -1,6 +1,9 @@
 import React from "react";
-import { faUserCircle } from "@fortawesome/free-solid-svg-icons";
-import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
+import {
+  faBars,
+  faUserCircle,
+  faShoppingCart,
+} from "@fortawesome/free-solid-svg-icons";
 import {
   StyledHeader,
   StyledNavigationAndSearchWrapper,
@@ -15,11 +18,12 @@ import StyledMarketSearchbar from "../MarketSearchbar/MarketSearchbar.styled";
 import StyledMemberServicesLink, {
   StyledMemberServicesWrapper,
 } from "../MemberServicesLink/MemberServicesLink.styled";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const AppHeader = () => {
   return (
     <StyledHeader>
-      <StyledLogo size="145px" />
+      <StyledLogo />
       <StyledNavigationAndSearchWrapper>
         <StyledDealsPageLink title="Weekly Deals" />
         <StyledMarketSearchbar placeholder="Search Marketplace" iconSize="lg" />
@@ -43,6 +47,7 @@ const AppHeader = () => {
           iconSize="lg"
         />
       </StyledMemberServicesWrapper>
+      <FontAwesomeIcon className="menu-icon" icon={faBars} size="lg" />
     </StyledHeader>
   );
 };
