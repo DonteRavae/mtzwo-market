@@ -18,6 +18,10 @@ export const StyledCategoryNavigationLink = styled(CategoryNavigationLink)`
   background-color: white;
   margin: 0 2.5rem;
   text-decoration: none;
+  &.active {
+    background-color: #612376;
+    color: white;
+  }
   & span {
     text-transform: uppercase;
     font-size: 0.8em;
