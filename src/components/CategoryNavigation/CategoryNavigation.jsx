@@ -1,10 +1,11 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
-export const CategoryNavigationLink = ({ className, title }) => {
+export const CategoryNavigationLink = ({ className, title, destination }) => {
   return (
-    <div className={className}>
+    <NavLink className={className} to={destination}>
       <span>{title}</span>
-    </div>
+    </NavLink>
   );
 };
 

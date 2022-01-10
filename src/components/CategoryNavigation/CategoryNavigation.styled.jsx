@@ -17,6 +17,7 @@ export const StyledCategoryNavigationLink = styled(CategoryNavigationLink)`
   box-shadow: 0 2px 4px #888;
   background-color: white;
   margin: 0 2.5rem;
+  text-decoration: none;
   & span {
     text-transform: uppercase;
     font-size: 0.8em;
