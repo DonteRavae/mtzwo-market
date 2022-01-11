@@ -29,10 +29,13 @@ const AppHeader = () => {
         <StyledMarketSearchbar placeholder="Search Marketplace" iconSize="lg" />
         <StyledDealsPageLink title="Best Sellers" />
         <StyledCategoryNavigationBar>
-          <StyledCategoryNavigationLink title="Audio" />
-          <StyledCategoryNavigationLink title="Video" />
-          <StyledCategoryNavigationLink title="Books" />
-          <StyledCategoryNavigationLink title="Clothing" />
+          <StyledCategoryNavigationLink title="Audio" destination="audio" />
+          <StyledCategoryNavigationLink title="Video" destination="video" />
+          <StyledCategoryNavigationLink title="Books" destination="books" />
+          <StyledCategoryNavigationLink
+            title="Clothing"
+            destination="clothing"
+          />
         </StyledCategoryNavigationBar>
       </StyledNavigationAndSearchWrapper>
       <StyledMemberServicesWrapper>
@@ -40,11 +43,13 @@ const AppHeader = () => {
           title="Sign In"
           icon={faUserCircle}
           iconSize="lg"
+          destination="signin"
         />
         <StyledMemberServicesLink
           title="Cart"
           icon={faShoppingCart}
           iconSize="lg"
+          destination="cart"
         />
       </StyledMemberServicesWrapper>
       <FontAwesomeIcon className="menu-icon" icon={faBars} size="lg" />
