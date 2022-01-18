@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -13,12 +13,12 @@ export const MobileMenuItem = ({ className, title }) => {
 
 const MobileMenu = ({ children, className, isActive }) => {
   return (
-      <nav className={`${className} ${isActive ? "active" : ""}`}>
-        <header className="greeting">
-          <h5>Welcome back, Donte!</h5>
-        </header>
-        {children}
-      </nav>
+    <nav className={`${className} ${isActive ? "active" : ""}`}>
+      <header className="greeting">
+        <h5>Welcome back, Donte!</h5>
+      </header>
+      {children}
+    </nav>
   );
 };
 

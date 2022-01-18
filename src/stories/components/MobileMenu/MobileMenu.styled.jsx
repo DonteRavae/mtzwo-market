@@ -16,14 +16,14 @@ export const StyledMobileMenuItem = styled(MobileMenuItem)`
   h3 {
     margin-right: auto;
   }
-  
+
   &:hover {
     border: 1px solid white;
     background-color: ${THEME.PRIMARY};
     color: white;
   }
-  `;
-  const StyledMobileMenu = styled(MobileMenu)`
+`;
+const StyledMobileMenu = styled(MobileMenu)`
   header {
     height: 25px;
     display: flex;
@@ -39,7 +39,7 @@ export const StyledMobileMenuItem = styled(MobileMenuItem)`
   box-shadow: 5px 1px 5px #888;
   position: absolute;
   left: -210px;
-  transition: all 0.5s ease;  
+  transition: all 0.5s ease;
   &.active {
     left: 0;
   }

@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import StyledMobileMenu, {
   StyledMobileMenuItem,
 } from "./components/MobileMenu/MobileMenu.styled";
@@ -9,7 +9,7 @@ export default {
 };
 
 export const MobileMenuV2 = () => {
-    const [active, setActive] = useState(false);
+  const [active, setActive] = useState(false);
   return (
     <div className="wrapper">
       <button onClick={() => setActive(!active)}>Open</button>
