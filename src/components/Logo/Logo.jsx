@@ -6,9 +6,9 @@ const Logo = ({ className }) => {
   const navigate = useNavigate();
   const handleClick = () => navigate("/");
   return (
-    <div className={className} onClick={handleClick}>
+    <figure className={className} onClick={handleClick}>
       <img src={logoImg} alt="Mt. Zion Shield Logo" />
-    </div>
+    </figure>
   );
 };
 
