@@ -33,6 +33,9 @@ const StyledMemberServicesLink = styled(MemberServicesLink)`
       cursor: pointer;
       border: 1px solid transparent;
     }
+    &#account-nav {
+      display: none;
+    }
     &:hover {
       border: 1px solid white;
       border-radius: 2px;

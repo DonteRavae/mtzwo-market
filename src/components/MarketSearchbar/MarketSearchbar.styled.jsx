@@ -23,6 +23,10 @@ const StyledMarketSearchbar = styled(MarketSearchbar)`
     cursor: pointer;
   }
 
+  @media ${DEVICES.MEDIUM} {
+    width: 100%;
+  }
+
   @media ${DEVICES.SMALL} {
     height: 100%;
     input[type="search"] {

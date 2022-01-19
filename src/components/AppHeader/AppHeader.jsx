@@ -23,6 +23,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const AppHeader = () => {
   return (
     <StyledHeader>
+      <FontAwesomeIcon className="menu-icon" icon={faBars} size="lg" />
       <StyledLogo />
       <StyledNavigationAndSearchWrapper>
         <StyledDealsPageLink title="Weekly Deals" />
@@ -44,6 +45,7 @@ const AppHeader = () => {
           icon={faUserCircle}
           iconSize="lg"
           destination="signin"
+          id="account-nav"
         />
         <StyledMemberServicesLink
           title="Cart"
@@ -52,7 +54,6 @@ const AppHeader = () => {
           destination="cart"
         />
       </StyledMemberServicesWrapper>
-      <FontAwesomeIcon className="menu-icon" icon={faBars} size="lg" />
     </StyledHeader>
   );
 };

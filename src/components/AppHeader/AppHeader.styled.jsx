@@ -26,6 +26,7 @@ export const StyledHeader = styled.header`
       padding: 0.25rem;
       border: 1px solid transparent;
       margin-left: 0.5rem;
+      margin-right: auto;
       &:hover {
         border: 1px solid white;
         border-radius: 2px;
