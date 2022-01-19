@@ -12,7 +12,7 @@ export const MobileMenuV2 = () => {
   const [active, setActive] = useState(false);
   return (
     <div className="wrapper">
-      <button onClick={() => setActive(!active)}>Open</button>
+      <button style={{marginBottom: "0.5rem"}} onClick={() => setActive(!active)}>Open</button>
       <StyledMobileMenu isActive={active}>
         <StyledMobileMenuItem title="New Releases" />
         <StyledMobileMenuItem title="Audio" />
@@ -20,6 +20,7 @@ export const MobileMenuV2 = () => {
         <StyledMobileMenuItem title="Books" />
         <StyledMobileMenuItem title="Clothing" />
         <StyledMobileMenuItem title="Deals" />
+        <StyledMobileMenuItem title="Account" accountItem user/>
       </StyledMobileMenu>
     </div>
   );
