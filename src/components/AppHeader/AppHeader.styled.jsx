@@ -27,7 +27,8 @@ export const StyledHeader = styled.header`
       border: 1px solid transparent;
       margin-left: 0.5rem;
       margin-right: auto;
-      &:hover {
+      &:hover,
+      &.active {
         border: 1px solid white;
         border-radius: 2px;
         background-color: ${THEME.PRIMARY};
