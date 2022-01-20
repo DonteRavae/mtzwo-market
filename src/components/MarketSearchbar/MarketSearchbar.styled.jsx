@@ -24,7 +24,7 @@ const StyledMarketSearchbar = styled(MarketSearchbar)`
   }
 
   @media ${DEVICES.MEDIUM} {
-    width: 100%;
+    width: 90%;
   }
 
   @media ${DEVICES.SMALL} {
