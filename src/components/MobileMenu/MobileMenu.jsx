@@ -20,13 +20,13 @@ export const MobileMenuItem = ({
   const navigate = useNavigate();
   const navigateToSignIn = (e) => {
     e.preventDefault();
-    navigate("/signin");
     toggleMenu();
+    navigate("/signin");
   };
   const navigateToSignUp = (e) => {
     e.preventDefault();
-    navigate("/signup");
     toggleMenu();
+    navigate("/signup");
   };
   return accountItem ? (
     <article className={`${className} account-item`}>
