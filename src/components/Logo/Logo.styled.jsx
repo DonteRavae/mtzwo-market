@@ -5,6 +5,7 @@ import Logo from "./Logo";
 const StyledLogo = styled(Logo)`
   height: 100%;
   padding-top: 0.5rem;
+  margin: 0;
   & img {
     height: 175%;
     cursor: pointer;
