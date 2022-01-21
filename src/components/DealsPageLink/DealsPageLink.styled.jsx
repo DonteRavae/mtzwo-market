@@ -19,7 +19,7 @@ const StyledDealsPageLink = styled(DealsPageLink)`
     border: 1px solid white;
   }
 
-  @media ${DEVICES.MEDIUM} {
+  @media ${DEVICES.LARGE} {
     display: none;
   }
 `;
