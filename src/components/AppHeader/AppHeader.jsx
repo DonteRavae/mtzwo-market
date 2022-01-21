@@ -3,7 +3,6 @@ import {
   faBars,
   faUserCircle,
   faShoppingCart,
-  faTimes,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   StyledHeader,
@@ -21,12 +20,12 @@ import StyledMemberServicesLink, {
 } from "../MemberServicesLink/MemberServicesLink.styled";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const AppHeader = ({ toggleMobileMenu, isMobileMenuActive }) => {
+const AppHeader = ({ toggleMobileMenu }) => {
   return (
     <StyledHeader>
       <FontAwesomeIcon
-        className={`menu-icon ${isMobileMenuActive ? "active" : ""}`}
-        icon={isMobileMenuActive ? faTimes : faBars}
+        className="menu-icon"
+        icon={faBars}
         size="lg"
         onClick={toggleMobileMenu}
       />
