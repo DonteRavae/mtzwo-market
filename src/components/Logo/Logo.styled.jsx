@@ -12,7 +12,7 @@ const StyledLogo = styled(Logo)`
   }
   @media ${DEVICES.LARGE} {
     margin-right: auto;
-    margin-left: 1%;
+    margin-left: auto;
     & img {
       height: 165%;
     }
