@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import AppHeader from "../AppHeader/AppHeader";
-import StyledMobileMenu, {
-  StyledMobileMenuItem,
-} from "../MobileMenu/MobileMenu.styled";
+import StyledMobileMenu from "../MobileMenu/MobileMenu.styled";
+import StyledMobileMenuItem from "../MobileMenu/MobileMenuItem/MobileMenuItem.styled";
 
 const App = () => {
   const [isMobileMenuActive, setIsMobileMenuActive] = useState(false);
