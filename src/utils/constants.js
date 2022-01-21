@@ -1,6 +1,6 @@
 export const SIZES = {
   XXSMALL: "390px",
-  XSMALL: "500px",
+  XSMALL: "499px",
   SMALL: "576px",
   SMEDIUM: "577px",
   MEDIUM: "768px",
@@ -22,4 +22,5 @@ export const DEVICES = {
 
 export const THEME = {
   PRIMARY: "#612376",
+  SECONDARY: "#da9a25"
 };
