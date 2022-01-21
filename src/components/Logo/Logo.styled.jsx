@@ -10,12 +10,21 @@ const StyledLogo = styled(Logo)`
     height: 175%;
     cursor: pointer;
   }
-  @media ${DEVICES.MEDIUM} {
+  @media ${DEVICES.LARGE} {
     margin-right: auto;
-    margin-left: auto;
+    margin-left: 1%;
     & img {
       height: 165%;
     }
+  }
+  @media ${DEVICES.SMALL} {
+    margin-right: 18%;
+  }
+  @media ${DEVICES.XSMALL} {
+    margin-right: 8%;
+  }
+  @media ${DEVICES.XXSMALL} {
+    margin-right: 3%;
   }
 `;
 
