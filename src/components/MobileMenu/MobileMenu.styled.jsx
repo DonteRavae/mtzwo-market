@@ -4,6 +4,9 @@ import { DEVICES, THEME } from "../../utils/constants";
 
 const StyledMobileMenu = styled(MobileMenu)`
   display: none;
+  h4 {
+    font-weight: 600;
+  }
   .greeting {
     display: flex;
     .exit-icon {
@@ -23,6 +26,8 @@ const StyledMobileMenu = styled(MobileMenu)`
       padding-left: 1.5rem;
       background-color: ${THEME.SECONDARY};
       color: ${THEME.PRIMARY};
+      text-shadow: 0 0 1px white;
+      letter-spacing: 0.05rem;
       h4 {
         margin: auto 0;
       }

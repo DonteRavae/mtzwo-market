@@ -3,6 +3,7 @@ import MobileMenuItem from "./MobileMenuItem";
 import { DEVICES, THEME } from "../../../utils/constants";
 
 const StyledMobileMenuItem = styled(MobileMenuItem)`
+  letter-spacing: 0.05rem;
   @media ${DEVICES.LARGE} {
     display: flex;
     align-items: center;

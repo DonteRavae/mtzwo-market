@@ -16,6 +16,7 @@ const MobileMenuItem = ({
   accountItem,
   user,
   toggleMenu,
+  submenu
 }) => {
   const navigate = useNavigate();
   const navigateToSignIn = (e) => {
@@ -79,7 +80,7 @@ const MobileMenuItem = ({
   ) : (
     <article className={className}>
       <h3>{title}</h3>
-      <FontAwesomeIcon icon={faCaretRight} size="lg" />
+      {submenu ? <FontAwesomeIcon icon={faCaretRight} size="lg" /> : null}
     </article>
   );
 };

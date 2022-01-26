@@ -12,13 +12,13 @@ const App = () => {
     <main className="App">
       {/* Header */}
       <AppHeader toggleMobileMenu={toggleMobileMenu} isMobileMenuActive={isMobileMenuActive} />
-      <StyledMobileMenu isActive={isMobileMenuActive}>
+      <StyledMobileMenu isActive={isMobileMenuActive} toggleMobileMenu={toggleMobileMenu}>
         <StyledMobileMenuItem title="New Releases" />
-        <StyledMobileMenuItem title="Audio" />
-        <StyledMobileMenuItem title="Video" />
+        <StyledMobileMenuItem title="Audio" sub/>
+        <StyledMobileMenuItem title="Video" sub/>
         <StyledMobileMenuItem title="Books" />
-        <StyledMobileMenuItem title="Clothing" />
-        <StyledMobileMenuItem title="Deals" />
+        <StyledMobileMenuItem title="Clothing" sub/>
+        <StyledMobileMenuItem title="Deals" sub/>
         <StyledMobileMenuItem title="Account" accountItem toggleMenu={toggleMobileMenu}/>
       </StyledMobileMenu>
       {/* Routes between pages */}
