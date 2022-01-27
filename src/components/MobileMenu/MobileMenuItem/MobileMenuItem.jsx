@@ -9,6 +9,8 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useNavigate } from "react-router-dom";
+import StyledAccountMenuItem from "./AccountMenuItem/AccountMenutItem.styled";
+import StyledSignInSignUpButton from "./SignInSignUpButton/SignInSignUpButton.styled";
 
 const MobileMenuItem = ({
   className,
@@ -16,7 +18,7 @@ const MobileMenuItem = ({
   accountItem,
   user,
   toggleMenu,
-  submenu
+  submenu,
 }) => {
   const navigate = useNavigate();
   const navigateToSignIn = (e) => {
@@ -35,45 +37,22 @@ const MobileMenuItem = ({
       <hr />
       {user ? (
         <div className="account-menu-items">
-          <div className="account-menu-item">
-            <FontAwesomeIcon
-              icon={faUserCircle}
-              className="account-menu-item-icon"
-              size="lg"
-            />
-            <h3>Profile</h3>
-          </div>
-          <div className="account-menu-item">
-            <FontAwesomeIcon
-              icon={faReceipt}
-              className="account-menu-item-icon"
-              size="lg"
-            />
-            <h3>Orders</h3>
-          </div>
-          <div className="account-menu-item">
-            <FontAwesomeIcon
-              icon={faHeart}
-              className="account-menu-item-icon"
-              size="lg"
-            />
-            <h3>Wishlist</h3>
-          </div>
+          <StyledAccountMenuItem title="Profile" icon={faUserCircle} />
+          <StyledAccountMenuItem title="Orders" icon={faReceipt} />
+          <StyledAccountMenuItem title="Wishlist" icon={faHeart} />
         </div>
       ) : (
         <div className="account-menu-items guest">
-          <button onClick={navigateToSignUp}>
-            <span>
-              <FontAwesomeIcon icon={faUserPlus} />
-            </span>
-            Sign Up
-          </button>
-          <button onClick={navigateToSignIn}>
-            <span>
-              <FontAwesomeIcon icon={faUser} />
-            </span>
-            Sign In
-          </button>
+          <StyledSignInSignUpButton
+            icon={faUserPlus}
+            title="Sign Up"
+            handleClick={navigateToSignUp}
+          />
+          <StyledSignInSignUpButton
+            icon={faUser}
+            title="Sign In"
+            handleClick={navigateToSignIn}
+          />
         </div>
       )}
     </article>
