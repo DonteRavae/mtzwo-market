@@ -1,8 +1,8 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const SignInSignUpButton = ({ handleClick, icon, title }) => (
-  <button onClick={handleClick}>
+const SignInSignUpButton = ({ className, handleClick, icon, title }) => (
+  <button className={className} onClick={handleClick}>
     <span>
       <FontAwesomeIcon icon={icon} />
     </span>
