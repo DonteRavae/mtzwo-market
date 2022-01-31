@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   faCaretRight,
   faHeart,
@@ -11,25 +11,34 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useNavigate } from "react-router-dom";
 import StyledAccountMenuItem from "./AccountMenuItem/AccountMenutItem.styled";
 import StyledSignInSignUpButton from "./SignInSignUpButton/SignInSignUpButton.styled";
+import { StyledSubMenu } from "./MobileMenuItem.styled";
 
 const MobileMenuItem = ({
   className,
   title,
   accountItem,
+  destination,
   user,
   toggleMenu,
   submenu,
+  children,
 }) => {
+  const [isSubMenuActive, toggleIsSubMenuActive] = useState(false);
   const navigate = useNavigate();
-  const navigateToSignIn = (e) => {
-    e.preventDefault();
+  const navigateToSignIn = () => {
     toggleMenu();
     navigate("/signin");
   };
-  const navigateToSignUp = (e) => {
-    e.preventDefault();
+  const navigateToSignUp = () => {
     toggleMenu();
     navigate("/signup");
+  };
+  const navigateToDestination = () => {
+    toggleMenu();
+    navigate(`/${destination}`);
+  }
+  const toggleSubMenu = () => {
+    toggleIsSubMenuActive(!isSubMenuActive);
   };
   return accountItem ? (
     <article className={`${className} account-item`}>
@@ -57,9 +66,16 @@ const MobileMenuItem = ({
       )}
     </article>
   ) : (
-    <article className={className}>
+    <article className={className} onClick={ submenu ? toggleSubMenu : navigateToDestination }>
       <h3>{title}</h3>
-      {submenu ? <FontAwesomeIcon icon={faCaretRight} size="lg" /> : null}
+      {submenu ? (
+        <FontAwesomeIcon
+          icon={faCaretRight}
+          size="lg"
+          rotation={isSubMenuActive ? 90 : 0}
+        />
+      ) : null}
+      {isSubMenuActive ? <StyledSubMenu>{children}</StyledSubMenu> : null}
     </article>
   );
 };
