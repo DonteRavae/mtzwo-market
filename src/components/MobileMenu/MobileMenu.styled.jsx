@@ -37,7 +37,7 @@ const StyledMobileMenu = styled(MobileMenu)`
     box-shadow: 5px 1px 5px #888;
     position: absolute;
     left: -105%;
-    transition: all 0.3s 0.1s ease-in-out;
+    transition: all 0.3s 0.1s ease-in;
     &.active {
       left: 0;
     }
