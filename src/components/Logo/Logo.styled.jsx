@@ -4,16 +4,27 @@ import Logo from "./Logo";
 
 const StyledLogo = styled(Logo)`
   height: 100%;
-  padding-top: 0.5rem;
+  padding-top: 0.25rem;
+  margin: 0;
   & img {
-    height: 175%;
+    height: 176%;
     cursor: pointer;
   }
-  @media ${DEVICES.MEDIUM} {
+  @media ${DEVICES.LARGE} {
     margin-right: auto;
+    margin-left: auto;
     & img {
-      height: 165%;
+      height: 167%;
     }
+  }
+  @media ${DEVICES.SMALL} {
+    margin-right: 18%;
+  }
+  @media ${DEVICES.XSMALL} {
+    margin-right: 8%;
+  }
+  @media ${DEVICES.XXSMALL} {
+    margin-right: 3%;
   }
 `;
 

@@ -20,9 +20,15 @@ import StyledMemberServicesLink, {
 } from "../MemberServicesLink/MemberServicesLink.styled";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const AppHeader = () => {
+const AppHeader = ({ toggleMobileMenu }) => {
   return (
     <StyledHeader>
+      <FontAwesomeIcon
+        className="menu-icon"
+        icon={faBars}
+        size="lg"
+        onClick={toggleMobileMenu}
+      />
       <StyledLogo />
       <StyledNavigationAndSearchWrapper>
         <StyledDealsPageLink title="Weekly Deals" />
@@ -44,6 +50,7 @@ const AppHeader = () => {
           icon={faUserCircle}
           iconSize="lg"
           destination="signin"
+          id="account-nav"
         />
         <StyledMemberServicesLink
           title="Cart"
@@ -52,7 +59,6 @@ const AppHeader = () => {
           destination="cart"
         />
       </StyledMemberServicesWrapper>
-      <FontAwesomeIcon className="menu-icon" icon={faBars} size="lg" />
     </StyledHeader>
   );
 };

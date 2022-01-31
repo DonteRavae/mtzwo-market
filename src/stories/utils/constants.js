@@ -1,17 +1,13 @@
 export const SIZES = {
-  XXSMALL: "390px",
-  XSMALL: "499px",
   SMALL: "576px",
   SMEDIUM: "577px",
   MEDIUM: "768px",
-  LARGE: "993px",
+  LARGE: "992px",
   XLARGE: "1200px",
   XXLARGE: "1400px",
 };
 
 export const DEVICES = {
-  XXSMALL: `(max-width: ${SIZES.XXSMALL})`,
-  XSMALL: `(max-width: ${SIZES.XSMALL})`,
   SMALL: `(max-width: ${SIZES.SMALL})`,
   SMEDIUM: `(max-width: ${SIZES.SMEDIUM})`,
   MEDIUM: `(max-width: ${SIZES.MEDIUM})`,
@@ -22,5 +18,4 @@ export const DEVICES = {
 
 export const THEME = {
   PRIMARY: "#612376",
-  SECONDARY: "#da9a25"
 };
