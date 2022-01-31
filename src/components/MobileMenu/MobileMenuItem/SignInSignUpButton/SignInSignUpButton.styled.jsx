@@ -11,7 +11,7 @@ const StyledSignInSignUpButton = styled(SignInSignUpButton)`
   background-color: ${THEME.SECONDARY};
   color: ${THEME.PRIMARY};
   span {
-    margin-right: 0.5rem;
+    margin-right: -1rem;
     svg {
       filter: drop-shadow(1px 1px #333);
     }
