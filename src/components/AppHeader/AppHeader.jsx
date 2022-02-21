@@ -31,9 +31,9 @@ const AppHeader = ({ toggleMobileMenu }) => {
       />
       <StyledLogo />
       <StyledNavigationAndSearchWrapper>
-        <StyledDealsPageLink title="Weekly Deals" />
+        <StyledDealsPageLink title="Weekly Deals" destination="deals/weeklydeals" />
         <StyledMarketSearchbar placeholder="Search Marketplace" iconSize="lg" />
-        <StyledDealsPageLink title="Best Sellers" />
+        <StyledDealsPageLink title="Best Sellers" destination="deals/bestsellers" />
         <StyledCategoryNavigationBar>
           <StyledCategoryNavigationLink title="Audio" destination="audio" />
           <StyledCategoryNavigationLink title="Video" destination="video" />
