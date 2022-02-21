@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import AppHeader from "../AppHeader/AppHeader";
 import StyledMobileMenu from "../MobileMenu/MobileMenu.styled";
 import StyledMobileMenuItem from "../MobileMenu/MobileMenuItem/MobileMenuItem.styled";
+import LandingPage from "../../pages/Landing/Landing.page";
 
 const App = () => {
   const [isMobileMenuActive, setIsMobileMenuActive] = useState(false);
@@ -23,17 +24,17 @@ const App = () => {
           <StyledMobileMenuItem
             title="Audio"
             toggleMenu={toggleMobileMenu}
-            destination="newreleases/audio"
+            destination="audio/newreleases"
           />
           <StyledMobileMenuItem
             title="Video"
             toggleMenu={toggleMobileMenu}
-            destination="newreleases/video"
+            destination="video/newreleases"
           />
           <StyledMobileMenuItem
             title="Podcasts"
             toggleMenu={toggleMobileMenu}
-            destination="newreleases/podcasts"
+            destination="audio/podcasts/newreleases"
           />
         </StyledMobileMenuItem>
         <StyledMobileMenuItem title="Audio" submenu>
@@ -48,14 +49,14 @@ const App = () => {
             destination="audio/biblestudy"
           />
           <StyledMobileMenuItem
-            title="Special Guests"
-            toggleMenu={toggleMobileMenu}
-            destination="audio/specialguests"
-          />
-          <StyledMobileMenuItem
             title="Podcasts"
             toggleMenu={toggleMobileMenu}
             destination="audio/podcasts"
+          />
+          <StyledMobileMenuItem
+            title="Special Guests"
+            toggleMenu={toggleMobileMenu}
+            destination="audio/specialguests"
           />
           <StyledMobileMenuItem
             title="All Audio"
@@ -78,11 +79,6 @@ const App = () => {
             title="Special Guests"
             toggleMenu={toggleMobileMenu}
             destination="video/specialguests"
-          />
-          <StyledMobileMenuItem
-            title="Podcasts"
-            toggleMenu={toggleMobileMenu}
-            destination="video/podcasts"
           />
           <StyledMobileMenuItem
             title="Performances"
@@ -152,6 +148,7 @@ const App = () => {
         />
       </StyledMobileMenu>
       {/* Routes between pages */}
+      <LandingPage />
     </main>
   );
 };
