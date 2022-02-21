@@ -4,7 +4,7 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 const MarketSearchbar = ({ className, placeholder, name, id, iconSize }) => {
   return (
-    <div className={className}>
+    <div className={`${className} market-searchbar`}>
       <input type="search" name={name} id={id} placeholder={placeholder} />
       <FontAwesomeIcon
         icon={faSearch}

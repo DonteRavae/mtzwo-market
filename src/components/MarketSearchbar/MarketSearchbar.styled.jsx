@@ -15,6 +15,10 @@ const StyledMarketSearchbar = styled(MarketSearchbar)`
     outline: none;
     border-radius: 2px;
     border: none;
+
+    &:focus {
+      box-shadow: 0 0 5px #888 inset;
+    }
   }
   .search-icon {
     position: absolute;
