@@ -7,6 +7,7 @@ export const FormContainer = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 10px 50px;
 `;
 
 // --- FORM HEADER COMPONENT --- //
@@ -24,7 +25,6 @@ export const FormHeaderContainer = styled.header`
 // --- THIRD PARY SIGN IN CONTAINER --- //
 
 export const ThirdPartyAccessContainer = styled.section`
-  width: 350px;
   display: flex;
   position: relative;
   justify-content: space-between;
@@ -36,8 +36,8 @@ export const ThirdPartyAccessContainer = styled.section`
 
   span {
     position: absolute;
-    left: 160px;
-    top: 76px;
+    left: 233px;
+    top: 73px;
     font-size: 12px;
     background-color: white;
     width: 30px;
@@ -53,13 +53,14 @@ export const FormExtrasContainer = styled.section`
   display: flex;
   margin-top: 10px;
   margin-bottom: 30px;
+  align-items: center;
 `;
 
 // --- FORGOT PASSWORD CONTAINER --- //
 
 export const ForgotPasswordContainer = styled.a`
   margin-right: 45px;
-  margin-bottom: 21px;
+  // margin-bottom: 21px;
   color: red;
   font-size: 14px;
   cursor: pointer;

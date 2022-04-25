@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import SignInForm from "./Forms/SignInForm";
 import SignUpForm from "./Forms/SignUpForm";
 import {
+  ActiveTabArrowContainer,
   MemberAccessContainer,
   MemberAccessHeaderContainer,
   MemberAccessHeaderTabContainer,
@@ -9,32 +10,23 @@ import {
 
 const MemberAccess = () => {
   const [signInActive, setSignInActive] = useState<boolean>(true);
-  const [signUpActive, setSignUpActive] = useState<boolean>(false);
-
-  const handleSignInTab = (): void => {
-    setSignInActive(true);
-    setSignUpActive(false);
-  };
-
-  const handleSignUpTab = (): void => {
-    setSignUpActive(true);
-    setSignInActive(false);
-  };
 
   return (
     <MemberAccessContainer>
       <MemberAccessHeaderContainer>
         <MemberAccessHeaderTabContainer
           active={signInActive}
-          onClick={handleSignInTab}
+          onClick={() => setSignInActive(true)}
         >
           SIGN IN
+          {signInActive ? <ActiveTabArrowContainer /> : null}
         </MemberAccessHeaderTabContainer>
         <MemberAccessHeaderTabContainer
-          active={signUpActive}
-          onClick={handleSignUpTab}
+          active={!signInActive}
+          onClick={() => setSignInActive(false)}
         >
           CREATE AN ACCOUNT
+          {!signInActive ? <ActiveTabArrowContainer /> : null}
         </MemberAccessHeaderTabContainer>
       </MemberAccessHeaderContainer>
 

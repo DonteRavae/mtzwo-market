@@ -21,7 +21,7 @@ const SignUpForm = () => {
   const [confirmPasswordInput, setConfirmPasswordInput] = useState<string>("");
   const [firstNameInput, setFirstNameInput] = useState<string>("");
   const [lastNameInput, setLastNameInput] = useState<string>("");
-  const [rememberMeInput, toggleRememberMe] = useState<boolean>(false);
+  const [rememberMeInput, toggleRememberMe] = useState<boolean>(true);
 
   // --- HANDLERS --- //
   const handleEmailInput: KeyboardEventHandler<HTMLInputElement> = (event) => {
@@ -62,10 +62,10 @@ const SignUpForm = () => {
     >
       <FormHeaderContainer>
         <ThirdPartyAccessContainer>
-          <CustomButton type="button" width="160px" thirdParty>
+          <CustomButton type="button" width="225px" thirdParty>
             Facebook
           </CustomButton>
-          <CustomButton type="button" width="160px" thirdParty>
+          <CustomButton type="button" width="225px" thirdParty>
             Google
           </CustomButton>
           <span>OR</span>
@@ -118,10 +118,11 @@ const SignUpForm = () => {
           id="rememberMeCheckbox"
           type="checkbox"
           handleChange={toggleChecked}
+          checked={rememberMeInput}
         />
       </FormExtrasContainer>
 
-      <CustomButton type="submit">Create Account</CustomButton>
+      <CustomButton type="submit" width="375px" >Create Account</CustomButton>
 
       <FormFooterContainer>
         <PrivacyAndTermsContainer>
