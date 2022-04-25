@@ -1,6 +1,6 @@
 # Mt. Zion World Outreach Marketplace
 
-Link to Trello board: https://trello.com/b/LhTr3etj/mt-zion-world-outreach-marketplace
+Link to Trello board: https://trello.com/b/65B7ovZK
 
 ## Stakeholders
 
