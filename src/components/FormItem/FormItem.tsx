@@ -25,6 +25,7 @@ const FormItem = ({
   placeholder,
   id,
   required,
+  checked,
   handleChange,
 }: FormItemProps) => {
   const [inputValue, setInputValue] = useState<string>("");
@@ -37,11 +38,12 @@ const FormItem = ({
         required={required}
         onChange={handleChange}
         onInput={(event) => setInputValue(event.currentTarget.value)}
+        checked={checked}
       />
 
       <FormInputLabelContainer
         htmlFor={id}
-        className={inputValue && inputValue.length ? "shrink" : ""}
+        className={inputValue && inputValue.length && type !== "checkbox" ? "shrink" : ""}
         type={type ? type : "text"}
       >
         <span>{required ? "*" : ""}</span>

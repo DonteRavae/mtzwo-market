@@ -21,7 +21,7 @@ export const FormInputContainer = styled.input`
   line-height: 21px;
 
   &:focus ~ label {
-    ${(props) => (props.type === "checkbox" ? "" : shrinkLabel)}
+    ${(props) => (props.type === "checkbox" ? "" : shrinkLabel)};
     span {
       display: contents;
     }
@@ -45,6 +45,7 @@ const labelStyle = css`
 const checkboxLabelStyle = css`
   position: relative;
   font-size: 14px;
+  margin-left: 3px;
 `;
 
 const getLabelStyle = (props: LabelProps) => {
@@ -77,10 +78,10 @@ type FormItemProp = {
 };
 
 export const FormItemContainer = styled.section<FormItemProp>`
-  height: ${(props) => (props.type === "checkbox" ? 0 : "50px")};
-  width: ${(props) => (props.type === "checkbox" ? "141px" : "350px")};
+  height: ${(props) => (props.type === "checkbox" ? "" : "50px")};
+  width: ${(props) => (props.type === "checkbox" ? "141px" : "100%")};
   position: relative;
-  margin-bottom: ${(props) => (props.type === "checkbox" ? 0 : "10px")};
+  margin-bottom: ${(props) => (props.type === "checkbox" ? "auto" : "30px")};
   margin-right: auto;
   margin-left: ${(props) => (props.type === "checkbox" ? "45px" : "auto")};
 

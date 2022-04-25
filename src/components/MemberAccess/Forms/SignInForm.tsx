@@ -14,7 +14,7 @@ import {
 const SignInForm = () => {
   const [emailInput, setEmailInput] = useState<string>("");
   const [passwordInput, setPasswordInput] = useState<string>("");
-  const [rememberMeInput, toggleRememberMe] = useState<boolean>(false);
+  const [rememberMeInput, toggleRememberMe] = useState<boolean>(true);
 
   const handleEmailInput: KeyboardEventHandler<HTMLInputElement> = (
     event
@@ -49,10 +49,10 @@ const SignInForm = () => {
       <FormHeaderContainer>
         <h2>Welcome back!</h2>
         <ThirdPartyAccessContainer>
-          <CustomButton type="button" width="160px" thirdParty>
+          <CustomButton type="button" width="225px" thirdParty>
             Facebook
           </CustomButton>
-          <CustomButton type="button" width="160px" thirdParty>
+          <CustomButton type="button" width="225px" thirdParty>
             Google
           </CustomButton>
           <span>OR</span>
@@ -82,13 +82,14 @@ const SignInForm = () => {
           name="rememberMe"
           id="rememberMeCheckbox"
           type="checkbox"
+          checked={rememberMeInput}
           handleChange={toggleChecked}
         />
 
         <ForgotPasswordContainer>Forgot Password?</ForgotPasswordContainer>
       </FormExtrasContainer>
 
-      <CustomButton type="submit">Sign In</CustomButton>
+      <CustomButton width="375px" type="submit">Sign In</CustomButton>
 
       <FormFooterContainer>
         <PrivacyAndTermsContainer>
