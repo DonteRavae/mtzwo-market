@@ -1,14 +1,15 @@
 import { ReactNode } from "react";
 import { useNavigate } from "react-router-dom";
 import { LinksContainer, NavLinkContainer } from "./Links.styled";
+import {
+  faShoppingCart,
+  faUserCircle,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 type NavLinkProps = {
   destination: string;
   children: ReactNode;
-};
-
-type LinkProps = {
-  children?: ReactNode;
 };
 
 export const WeeklyDealsLink = () => {
@@ -35,23 +36,34 @@ export const BestSellersLink = () => {
   );
 };
 
-export const MemberAccessLink = ({ children }: LinkProps) => {
+export const MemberAccessLink = () => {
   const navigate = useNavigate();
+  const handleClick = () => navigate("/members/signin");
   return (
-    <LinksContainer
-      id="memberAccessLink"
-      onClick={() => navigate("/members/signin")}
-    >
-      {children}
+    <LinksContainer id="memberAccessLink" onClick={handleClick}>
+      <FontAwesomeIcon
+        icon={faUserCircle}
+        size="lg"
+        onClick={handleClick}
+        className="link-icon"
+      />
+      <span onClick={handleClick}>Sign In</span>
     </LinksContainer>
   );
 };
 
-export const CartLink = ({ children }: LinkProps) => {
+export const CartLink = () => {
   const navigate = useNavigate();
+  const handleClick = () => navigate("/cart");
   return (
-    <LinksContainer id="cartLink" onClick={() => navigate("/cart")}>
-      {children}
+    <LinksContainer id="cartLink" onClick={handleClick}>
+      <FontAwesomeIcon
+        icon={faShoppingCart}
+        size="lg"
+        onClick={handleClick}
+        className="link-icon"
+      />
+      <span onClick={handleClick}>Cart</span>
     </LinksContainer>
   );
 };

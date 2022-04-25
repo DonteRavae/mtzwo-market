@@ -26,9 +26,19 @@ export const LinksContainer = styled.div`
     display: flex;
     align-items: center;
     padding-left: 3.5rem;
+    cursor: auto;
 
-    span {
+    &:hover {
+      text-decoration: none;
+    }
+
+    span, .link-icon {
       margin-left: 0.5rem;
+
+      &:hover {
+        text-decoration: underline;
+        cursor:pointer;
+      }
     }
   }
 
