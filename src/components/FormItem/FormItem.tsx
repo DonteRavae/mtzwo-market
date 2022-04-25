@@ -43,7 +43,9 @@ const FormItem = ({
 
       <FormInputLabelContainer
         htmlFor={id}
-        className={inputValue && inputValue.length && type !== "checkbox" ? "shrink" : ""}
+        className={
+          inputValue && inputValue.length && type !== "checkbox" ? "shrink" : ""
+        }
         type={type ? type : "text"}
       >
         <span>{required ? "*" : ""}</span>

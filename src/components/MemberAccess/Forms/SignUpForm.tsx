@@ -122,7 +122,9 @@ const SignUpForm = () => {
         />
       </FormExtrasContainer>
 
-      <CustomButton type="submit" width="375px" >Create Account</CustomButton>
+      <CustomButton type="submit" width="375px">
+        Create Account
+      </CustomButton>
 
       <FormFooterContainer>
         <PrivacyAndTermsContainer>
