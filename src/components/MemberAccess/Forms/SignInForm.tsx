@@ -89,7 +89,9 @@ const SignInForm = () => {
         <ForgotPasswordContainer>Forgot Password?</ForgotPasswordContainer>
       </FormExtrasContainer>
 
-      <CustomButton width="375px" type="submit">Sign In</CustomButton>
+      <CustomButton width="375px" type="submit">
+        Sign In
+      </CustomButton>
 
       <FormFooterContainer>
         <PrivacyAndTermsContainer>

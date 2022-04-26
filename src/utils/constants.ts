@@ -1,3 +1,8 @@
+export const VALIDATIONS = {
+  EMAIL: /^(\w+@[a-zA-Z_]+?\.[a-zA-Z\.]{2,6})$/,
+  PASSWORD: /^((?=.*\d)(?=.*[!@#$%^&*])(?=.*[A-Za-z]).{8,15})$/,
+};
+
 export enum THEME {
   PRIMARY = "#612376",
   SECONDARY = "#da9a25",
@@ -10,7 +15,7 @@ export enum SIZES {
   LARGE = "992px",
   XLARGE = "1200px",
   XXLARGE = "1400px",
-};
+}
 
 export const DEVICES = {
   SMALL: `(max-width: ${SIZES.SMALL})`,

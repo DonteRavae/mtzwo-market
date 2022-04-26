@@ -9,6 +9,8 @@ type FormItemProps = {
   name: string;
   type?: React.HTMLInputTypeAttribute;
   checked?: boolean;
+  pattern?: string;
+  title?: string;
   placeholder: string;
   id: string;
   required?: boolean;
@@ -24,6 +26,8 @@ const FormItem = ({
   type,
   placeholder,
   id,
+  pattern,
+  title,
   required,
   checked,
   handleChange,
@@ -35,15 +39,19 @@ const FormItem = ({
         id={id}
         name={name}
         type={type ? type : "text"}
+        title={title}
         required={required}
         onChange={handleChange}
+        pattern={pattern}
         onInput={(event) => setInputValue(event.currentTarget.value)}
         checked={checked}
       />
 
       <FormInputLabelContainer
         htmlFor={id}
-        className={inputValue && inputValue.length && type !== "checkbox" ? "shrink" : ""}
+        className={
+          inputValue && inputValue.length && type !== "checkbox" ? "shrink" : ""
+        }
         type={type ? type : "text"}
       >
         <span>{required ? "*" : ""}</span>
