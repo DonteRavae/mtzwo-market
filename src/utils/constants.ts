@@ -1,7 +1,7 @@
-export const VALIDATIONS = {
-  EMAIL: /^(\w+@[a-zA-Z_]+?\.[a-zA-Z\.]{2,6})$/,
-  PASSWORD: /^((?=.*\d)(?=.*[!@#$%^&*])(?=.*[A-Za-z]).{8,15})$/,
-};
+export const EMAIL_VALIDATION = RegExp(/^(\w+@[a-zA-Z_]+?\.[a-zA-Z\.]{2,6})$/);
+export const PASSWORD_VALIDATION = RegExp(
+  /^((?=.*\d)(?=.*[!@#$%^&*])(?=.*[A-Za-z]).{8,15})$/
+);
 
 export enum THEME {
   PRIMARY = "#612376",

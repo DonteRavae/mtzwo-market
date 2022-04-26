@@ -3,7 +3,10 @@ import React, {
   ChangeEventHandler,
   useState,
 } from "react";
-import { VALIDATIONS } from "../../../utils/constants";
+import {
+  EMAIL_VALIDATION,
+  PASSWORD_VALIDATION,
+} from "../../../utils/constants";
 
 import CustomButton from "../../CustomButton/CustomButton";
 import FormItem from "../../FormItem/FormItem";
@@ -75,7 +78,7 @@ const SignUpForm = () => {
 
       <FormItem
         name="email"
-        pattern={VALIDATIONS.EMAIL.source}
+        pattern={EMAIL_VALIDATION.source}
         placeholder="Email"
         id="signUpEmail"
         required
@@ -84,7 +87,7 @@ const SignUpForm = () => {
       <FormItem
         name="password"
         type="password"
-        pattern={VALIDATIONS.PASSWORD.source}
+        pattern={PASSWORD_VALIDATION.source}
         placeholder="Password"
         id="signUpPassword"
         title="8-15 characters  |  [ !  @  # $ % ^ & * ]  |  at least 1 lowercase or uppercase"
@@ -94,7 +97,7 @@ const SignUpForm = () => {
       <FormItem
         name="confirmPassword"
         type="password"
-        pattern={VALIDATIONS.PASSWORD.source}
+        pattern={PASSWORD_VALIDATION.source}
         placeholder="Confirm Password"
         id="signUpConfirmPassword"
         title="8-15 characters  |  [ !  @  # $ % ^ & * ]  |  at least 1 lowercase or uppercase"
