@@ -3,6 +3,7 @@ import React, {
   ChangeEventHandler,
   useState,
 } from "react";
+import { VALIDATIONS } from "../../../utils/constants";
 
 import CustomButton from "../../CustomButton/CustomButton";
 import FormItem from "../../FormItem/FormItem";
@@ -74,7 +75,7 @@ const SignUpForm = () => {
 
       <FormItem
         name="email"
-        type="email"
+        pattern={VALIDATIONS.EMAIL.source}
         placeholder="Email"
         id="signUpEmail"
         required
@@ -83,16 +84,20 @@ const SignUpForm = () => {
       <FormItem
         name="password"
         type="password"
+        pattern={VALIDATIONS.PASSWORD.source}
         placeholder="Password"
         id="signUpPassword"
+        title="8-15 characters  |  [ !  @  # $ % ^ & * ]  |  at least 1 lowercase or uppercase"
         required
         handleChange={handlePasswordInput}
       />
       <FormItem
         name="confirmPassword"
         type="password"
+        pattern={VALIDATIONS.PASSWORD.source}
         placeholder="Confirm Password"
         id="signUpConfirmPassword"
+        title="8-15 characters  |  [ !  @  # $ % ^ & * ]  |  at least 1 lowercase or uppercase"
         required
         handleChange={handlePasswordInput}
       />
