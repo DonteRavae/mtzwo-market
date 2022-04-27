@@ -1,4 +1,4 @@
-import React, { ChangeEventHandler, useState } from "react";
+import React, { ChangeEventHandler, FormEvent, useState } from "react";
 import {
   EMAIL_VALIDATION,
   ERROR,
@@ -71,19 +71,26 @@ const SignUpForm = () => {
     toggleRememberMe(event.currentTarget.checked);
   };
 
+  const handleSubmit = (event: FormEvent) => {
+    event.preventDefault();
+    if (passwordInput !== confirmPasswordInput) {
+      console.error("Passwords do not match");
+      return;
+    }
+
+    console.log({
+      emailInput,
+      passwordInput,
+      confirmPasswordInput,
+      firstNameInput,
+      lastNameInput,
+      rememberMeInput,
+    });
+  }
+
   return (
     <FormContainer
-      onSubmit={(event) => {
-        event.preventDefault();
-        console.log({
-          emailInput,
-          passwordInput,
-          confirmPasswordInput,
-          firstNameInput,
-          lastNameInput,
-          rememberMeInput,
-        });
-      }}
+      onSubmit={handleSubmit}
     >
       <FormHeaderContainer>
         <ThirdPartyAccessContainer>
