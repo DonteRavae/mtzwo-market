@@ -10,18 +10,17 @@ const shrinkLabel = css`
 
 export const FormInputContainer = styled.input`
   position: relative;
-  height: ${(props) => (props.type === "checkbox" ? "" : "100%")};
-  width: ${(props) => (props.type === "checkbox" ? "" : "100%")};
+  height: ${({ type }) => (type === "checkbox" ? "" : "100%")};
+  width: ${({ type }) => (type === "checkbox" ? "" : "100%")};
   outline: none;
   border: none;
-  border-bottom: 1px solid black;
   font-size: 18px;
   padding-left: 10px;
   padding-top: 20px;
   line-height: 21px;
 
   &:focus ~ label {
-    ${(props) => (props.type === "checkbox" ? "" : shrinkLabel)};
+    ${({ type }) => (type === "checkbox" ? "" : shrinkLabel)};
     span {
       display: contents;
     }
@@ -48,8 +47,8 @@ const checkboxLabelStyle = css`
   margin-left: 3px;
 `;
 
-const getLabelStyle = (props: LabelProps) => {
-  if (props.type === "checkbox") {
+const getLabelStyle = ({ type }: LabelProps) => {
+  if (type === "checkbox") {
     return checkboxLabelStyle;
   }
   return labelStyle;
@@ -75,17 +74,28 @@ export const FormInputLabelContainer = styled.label<LabelProps>`
 
 type FormItemProp = {
   type?: React.HTMLInputTypeAttribute;
+  message?: string;
 };
 
 export const FormItemContainer = styled.section<FormItemProp>`
-  height: ${(props) => (props.type === "checkbox" ? "" : "50px")};
-  width: ${(props) => (props.type === "checkbox" ? "141px" : "100%")};
+  height: ${({ type }) => (type === "checkbox" ? "" : "50px")};
+  width: ${({ type }) => (type === "checkbox" ? "141px" : "100%")};
   position: relative;
-  margin-bottom: ${(props) => (props.type === "checkbox" ? "auto" : "30px")};
+  margin-bottom: ${({ type }) => (type === "checkbox" ? "auto" : "35px")};
   margin-right: auto;
-  margin-left: ${(props) => (props.type === "checkbox" ? "45px" : "auto")};
+  margin-left: ${({ type }) => (type === "checkbox" ? "45px" : "auto")};
+
+  input {
+    border-bottom: ${({ message }) =>
+      message ? "1px solid red" : "1px solid black"};
+  }
 
   input[type="password"] {
     letter-spacing: 0.3rem;
   }
+`;
+
+export const InputMessageContainer = styled.span`
+  color: red;
+  font-size: 12px;
 `;

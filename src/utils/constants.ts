@@ -25,3 +25,9 @@ export const DEVICES = {
   XLARGE: `(max-width: ${SIZES.XLARGE})`,
   XXLARGE: `(max-width: ${SIZES.XXLARGE})`,
 };
+
+export enum ERROR {
+  INVALID_EMAIL = "Please enter a valid email.",
+  INVALID_PASSWORD = "Please enter a valid password.",
+  INVALID_PASSWORD_MATCH = "Passwords do not match.",
+}

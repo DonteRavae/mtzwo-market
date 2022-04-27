@@ -1,4 +1,4 @@
-import { useState, KeyboardEventHandler, ChangeEventHandler } from "react";
+import { useState, ChangeEventHandler } from "react";
 import CustomButton from "../../CustomButton/CustomButton";
 import FormItem from "../../FormItem/FormItem";
 import {
@@ -16,7 +16,7 @@ const SignInForm = () => {
   const [passwordInput, setPasswordInput] = useState<string>("");
   const [rememberMeInput, toggleRememberMe] = useState<boolean>(true);
 
-  const handleEmailInput: KeyboardEventHandler<HTMLInputElement> = (
+  const handleEmailInput: ChangeEventHandler<HTMLInputElement> = (
     event
   ): void => {
     const { value } = event.currentTarget;
@@ -26,7 +26,7 @@ const SignInForm = () => {
     else event.currentTarget.setCustomValidity("");
   };
 
-  const handlePasswordInput: KeyboardEventHandler<HTMLInputElement> = (
+  const handlePasswordInput: ChangeEventHandler<HTMLInputElement> = (
     event
   ): void => {
     setPasswordInput(event.currentTarget.value);
@@ -64,7 +64,7 @@ const SignInForm = () => {
         name="email"
         id="signInEmail"
         type="email"
-        handleChange={handleEmailInput}
+        handleInput={handleEmailInput}
         required
       />
       <FormItem
@@ -72,7 +72,7 @@ const SignInForm = () => {
         name="password"
         id="signInPassword"
         type="password"
-        handleChange={handlePasswordInput}
+        handleInput={handlePasswordInput}
         required
       />
 
@@ -83,7 +83,7 @@ const SignInForm = () => {
           id="rememberMeCheckbox"
           type="checkbox"
           checked={rememberMeInput}
-          handleChange={toggleChecked}
+          handleInput={toggleChecked}
         />
 
         <ForgotPasswordContainer>Forgot Password?</ForgotPasswordContainer>

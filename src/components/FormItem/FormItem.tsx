@@ -3,6 +3,7 @@ import {
   FormItemContainer,
   FormInputContainer,
   FormInputLabelContainer,
+  InputMessageContainer,
 } from "./FormItem.styled";
 
 type FormItemProps = {
@@ -11,14 +12,12 @@ type FormItemProps = {
   checked?: boolean;
   pattern?: string;
   title?: string;
+  message?: string;
   placeholder: string;
   id: string;
   required?: boolean;
-  handleChange(
-    event:
-      | React.ChangeEvent<HTMLInputElement>
-      | React.KeyboardEvent<{ value: string }>
-  ): void;
+  handleInput?(event: React.ChangeEvent<HTMLInputElement>): void;
+  handleChange?(event: React.ChangeEvent<HTMLInputElement>): void;
 };
 
 const FormItem = ({
@@ -28,20 +27,23 @@ const FormItem = ({
   id,
   pattern,
   title,
+  message,
   required,
   checked,
   handleChange,
+  handleInput,
 }: FormItemProps) => {
   const [inputValue, setInputValue] = useState<string>("");
   return (
-    <FormItemContainer type={type}>
+    <FormItemContainer type={type} message={message}>
       <FormInputContainer
         id={id}
         name={name}
         type={type ? type : "text"}
         title={title}
         required={required}
-        onChange={handleChange}
+        onChange={handleInput}
+        onBlur={handleChange}
         pattern={pattern}
         onInput={(event) => setInputValue(event.currentTarget.value)}
         checked={checked}
@@ -57,6 +59,7 @@ const FormItem = ({
         <span>{required ? "*" : ""}</span>
         {placeholder}
       </FormInputLabelContainer>
+      <InputMessageContainer>{message}</InputMessageContainer>
     </FormItemContainer>
   );
 };
