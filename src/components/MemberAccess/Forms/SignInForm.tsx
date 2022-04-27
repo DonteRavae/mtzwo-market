@@ -1,4 +1,4 @@
-import { useState, ChangeEventHandler } from "react";
+import { useState, ChangeEventHandler, FormEvent } from "react";
 import CustomButton from "../../CustomButton/CustomButton";
 import FormItem from "../../FormItem/FormItem";
 import {
@@ -35,16 +35,19 @@ const SignInForm = () => {
   const toggleChecked: ChangeEventHandler<HTMLInputElement> = (event): void => {
     toggleRememberMe(event.currentTarget.checked);
   };
+
+  const handleSubmit = (event: FormEvent) => {
+    event.preventDefault();
+    console.log({
+      emailInput,
+      passwordInput,
+      rememberMeInput,
+    });
+  };
+  
   return (
     <FormContainer
-      onSubmit={(event) => {
-        event.preventDefault();
-        console.log({
-          emailInput,
-          passwordInput,
-          rememberMeInput,
-        });
-      }}
+      onSubmit={handleSubmit}
     >
       <FormHeaderContainer>
         <h2>Welcome back!</h2>
