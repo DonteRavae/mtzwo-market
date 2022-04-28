@@ -16,8 +16,7 @@ const GoogleSignInButton = () => {
   };
   useEffect(() => {
     google.accounts.id.initialize({
-      client_id:
-        "411822260912-tkc910m0ebckulue7nd3956navtpe8f0.apps.googleusercontent.com",
+      client_id: process.env.REACT_APP_GOOGLE_SIGN_IN_CLIENT_ID,
       callback: handleCredentialResponse,
     });
     google.accounts.id.renderButton(divRef.current, {
