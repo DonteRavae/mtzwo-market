@@ -10,7 +10,7 @@ declare global {
 const google = window.google;
 
 const GoogleSignInButton = () => {
-  const divRef = createRef<HTMLDivElement>();
+  const spanRef = createRef<HTMLSpanElement>();
   const handleCredentialResponse = (response: any) => {
     console.log("Encoded JWT ID token: " + response.credential);
   };
@@ -19,18 +19,17 @@ const GoogleSignInButton = () => {
       client_id: process.env.REACT_APP_GOOGLE_SIGN_IN_CLIENT_ID,
       callback: handleCredentialResponse,
     });
-    google.accounts.id.renderButton(divRef.current, {
-      theme: "outline",
+    google.accounts.id.renderButton(spanRef.current, {
+      theme: "filled_black",
       size: "large",
-      text: "signup_with"
+      text: "continue_with",
+      width: "400",
     });
 
     google.accounts.id.prompt();
-  }, [divRef]);
+  }, [spanRef]);
 
-  return (
-    <GoogleSignInButtonContainer ref={divRef}></GoogleSignInButtonContainer>
-  );
+  return <GoogleSignInButtonContainer ref={spanRef} />;
 };
 
 export default GoogleSignInButton;

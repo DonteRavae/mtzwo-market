@@ -7,6 +7,7 @@ import {
 
 import CustomButton from "../../CustomButton/CustomButton";
 import FormItem from "../../FormItem/FormItem";
+import GoogleSignInButton from "../GoogleSignIn/GoogleSignIn";
 import {
   FormContainer,
   FormExtrasContainer,
@@ -86,21 +87,14 @@ const SignUpForm = () => {
       lastNameInput,
       rememberMeInput,
     });
-  }
+  };
 
   return (
-    <FormContainer
-      onSubmit={handleSubmit}
-    >
+    <FormContainer onSubmit={handleSubmit}>
       <FormHeaderContainer>
         <ThirdPartyAccessContainer>
-          <CustomButton type="button" width="225px" thirdParty>
-            Facebook
-          </CustomButton>
-          <CustomButton type="button" width="225px" thirdParty>
-            Google
-          </CustomButton>
-          <span>OR</span>
+          <GoogleSignInButton />
+          <span className="or">OR</span>
         </ThirdPartyAccessContainer>
       </FormHeaderContainer>
 

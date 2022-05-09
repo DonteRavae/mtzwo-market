@@ -1,6 +1,7 @@
 import { useState, ChangeEventHandler, FormEvent } from "react";
 import CustomButton from "../../CustomButton/CustomButton";
 import FormItem from "../../FormItem/FormItem";
+import GoogleSignInButton from "../GoogleSignIn/GoogleSignIn";
 import {
   ForgotPasswordContainer,
   FormContainer,
@@ -15,6 +16,8 @@ const SignInForm = () => {
   const [emailInput, setEmailInput] = useState<string>("");
   const [passwordInput, setPasswordInput] = useState<string>("");
   const [rememberMeInput, toggleRememberMe] = useState<boolean>(true);
+
+  // --- HANDLERS --- //
 
   const handleEmailInput: ChangeEventHandler<HTMLInputElement> = (
     event
@@ -44,21 +47,14 @@ const SignInForm = () => {
       rememberMeInput,
     });
   };
-  
+
   return (
-    <FormContainer
-      onSubmit={handleSubmit}
-    >
+    <FormContainer onSubmit={handleSubmit}>
       <FormHeaderContainer>
         <h2>Welcome back!</h2>
         <ThirdPartyAccessContainer>
-          <CustomButton type="button" width="225px" thirdParty>
-            Facebook
-          </CustomButton>
-          <CustomButton type="button" width="225px" thirdParty>
-            Google
-          </CustomButton>
-          <span>OR</span>
+          <GoogleSignInButton />
+          <span className="or">OR</span>
         </ThirdPartyAccessContainer>
       </FormHeaderContainer>
 

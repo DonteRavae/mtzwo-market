@@ -34,10 +34,10 @@ export const ThirdPartyAccessContainer = styled.section`
   margin-right: auto;
   margin-bottom: 15px;
 
-  span {
+  .or {
     position: absolute;
     left: 233px;
-    top: 73px;
+    top: 76px;
     font-size: 12px;
     background-color: white;
     width: 30px;

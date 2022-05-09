@@ -3,6 +3,7 @@ import { CustomButtonContainer } from "./CustomButton.styled";
 
 type ButtonProps = {
   type: "button" | "submit" | "reset";
+  className?: string;
   width?: string;
   thirdParty?: boolean;
   children: React.ReactNode;
@@ -14,6 +15,7 @@ const CustomButton = ({
   width,
   thirdParty,
   children,
+  className,
   handleClick,
 }: ButtonProps) => (
   <CustomButtonContainer
@@ -21,6 +23,7 @@ const CustomButton = ({
     width={width}
     thirdParty={thirdParty}
     onClick={handleClick}
+    className={className}
   >
     {children}
   </CustomButtonContainer>
