@@ -47,7 +47,7 @@ export const MemberAccessLink = () => {
         onClick={handleClick}
         className="link-icon"
       />
-      <span onClick={handleClick}>Sign In</span>
+      <span onClick={handleClick}>Members</span>
     </LinksContainer>
   );
 };
